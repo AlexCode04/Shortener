@@ -73,7 +73,7 @@ export default function Home() {
             {shortUrl && (
               <div className="flex flex-col items-center space-y-2 md:pb-10">
                 <span className="border-2 ml-2 rounded-sm border-gray-500 truncate bg-gray-600 shadow-black w-auto shadow-md text-start text-white p-2">
-                  {`https://shorter-ac.vercel.app/${shortUrl}`}</span>
+                  {`${window.location.origin}/${shortUrl}`}</span>
                   <button
                   type="button"
                   onClick={handleCopy}
