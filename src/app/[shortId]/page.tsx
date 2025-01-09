@@ -2,15 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 
-interface Props {
-  shortUrl: string;
-}
-
-export default function RedirectWithDelay({ shortUrl }: Props) {
+export default function RedirectWithDelay() {
   const [secondsLeft, setSecondsLeft] = useState(5);
   const [redirectUrl, setRedirectUrl] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);

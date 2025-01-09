@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import LoadingSpinner from "@/components/LoadingSpinner/LoadingSpinner";
 import Image from 'next/image';
 
