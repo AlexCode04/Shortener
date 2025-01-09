@@ -72,18 +72,18 @@ export default function Home() {
             </button>
             {shortUrl && (
               <div className="flex flex-col items-center space-y-2 md:pb-10">
-                <span className="border-2 ml-2 rounded-sm border-gray-500 bg-gray-600 shadow-black w-auto shadow-md text-start text-white p-2">
-                  {`${window.location.origin}/${shortUrl}`}
+                <span className="border-2 ml-2 rounded-sm border-gray-500 truncate bg-gray-600 shadow-black w-auto shadow-md text-start text-white p-2">
+                  {`https://shorter-ac.vercel.app/${shortUrl}`}</span>
                   <button
                   type="button"
                   onClick={handleCopy}
-                  className="bg-gray-700 ml-4 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition duration-200"
+                  className="bg-gray-700 ml-4 text-white px-4 py-2 rounded-md  hover:bg-gray-800 transition duration-200"
                 >
                   <span>
                     <Image src="/copiar-alt.svg" alt="Copy" width={20} height={20} />
                   </span>
                 </button>
-              </span>
+              
                 {copied && (
                   <span className="text-secundario text-center text-lg">
                     Copiado!
