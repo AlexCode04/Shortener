@@ -58,7 +58,7 @@ export default function About() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/feed/"
+              href="https://www.linkedin.com/in/angel-alexis-del-castillo-lerma-a49b67268/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 md: mb-6 bg-terciario p-2 rounded-md shadow-lg hover:bg-secundario hover:-translate-y-1 transition-all duration-300"
