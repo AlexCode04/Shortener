@@ -49,9 +49,8 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col items-center justify-center min-h-screen py-2 space-y-12">
-      <h1 className="text-6xl font-bold text-center py-6 text-secundario mt-16 animate-pulse hover:text-terciario transition-all duration-300 ">Shorter link</h1>
+      <h1 className="text-6xl font-bold text-center py-6 text-secundario mt-16 md:mt-0 md:py-2 md:mb-6 animate-pulse hover:text-terciario transition-all duration-300 ">Shorter link</h1>
         {isLoading ? (
           <LoadingSpinner />
         ) : (
@@ -59,7 +58,7 @@ export default function Home() {
             onSubmit={handleOnSubmit}
             className="p-4 w-11/12 h-36 items-center justify-center shadow-sm rounded-md flex flex-col space-y-4"
           >
-            <label className="text-bold text-xl py-6">Ingresa el link que deseas acortar</label>
+            <label className="text-bold text-xl py-6 md:py-4">Ingresa el link que deseas acortar</label>
             <input
               type="text"
               ref={inputRef}
@@ -74,7 +73,7 @@ export default function Home() {
               Acortar
             </button>
             {shortUrl && (
-              <div className="flex flex-col items-center space-y-2 ">
+              <div className="flex flex-col items-center space-y-2 md:pb-10">
                 <span className="border-2 ml-2 rounded-sm border-gray-500 bg-gray-600 shadow-black w-auto shadow-md text-start text-white p-2">
                   {`${window.location.origin}/${shortUrl}`}
                   <button
@@ -102,7 +101,6 @@ export default function Home() {
           </div>
         )}
       </div>
-      <Footer />
     </>
   );
 }

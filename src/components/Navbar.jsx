@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { colors } from "@/utils/colors";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +17,15 @@ const Navbar = () => {
 
   return (
     <nav className={`bg-secundario text-white px-4 py-3 shadow-md relative z-20`}>
-      <div className="flex justify-between items-center">
-        <div className="text-lg font-bold">Acortador de link</div>
+      <div className="flex justify-between  items-center">
+        <div className="text-lg font-bold flex flex-col-2 gap-4 ">Shorter Link <Image 
+          src="/enlace-barra-alt.svg"
+          alt="Logo"
+          width={20}
+          height={20}
+        />
+        
+        </div>
 
         <button
           className="block lg:hidden text-white focus:outline-none"
@@ -41,12 +48,12 @@ const Navbar = () => {
         </button>
 
         <div className="hidden lg:flex space-x-6 text-xl mr-4">
-          <Link href="/task" className="hover:underline hover:-translate-y-1 transition-all duration-300">
+          <Link href="/About" className="hover:underline hover:-translate-y-1 transition-all duration-300">
             Sobre Nosotros
           </Link>
-          {/* <Link href="/task/create" className="hover:underline hover:-translate-y-1 transition-all duration-300">
-            Crear cuenta
-          </Link> */}
+          <Link href="/" className="hover:underline hover:-translate-y-1 transition-all duration-300">
+            Acortar Link
+          </Link>
         </div>
       </div>
 
@@ -65,15 +72,15 @@ const Navbar = () => {
     </button>
     
     {/* Links */}
-    {/* <Link
-      href="/task"
+    <Link
+      href="/"
       className="text-white p-4 shadow-xl bg-secundario border-gray-500 border-opacity-20 rounded-lg w-2/3 text-center border-2 text-2xl hover:underline hover:-translate-y-2 hover:bg-blue-600 transition-all duration-300"
       onClick={closeMenu}
     >
-      Crear cuenta
-    </Link> */}
+      Acortar link
+    </Link>
     <Link
-      href="/task/create"
+      href="/About"
       className="text-white p-4 shadow-xl bg-secundario border-gray-500 border-opacity-20 rounded-lg w-2/3 text-center border-2 text-2xl hover:underline hover:-translate-y-2 hover:bg-blue-600 transition-all duration-300"
       onClick={closeMenu}
     >
