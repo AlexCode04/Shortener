@@ -24,7 +24,7 @@ export default function RedirectWithDelay() {
         const data = await response.json();
         setRedirectUrl(data.url);
       } catch (err) {
-        setError("Unable to fetch redirect URL.");
+        setError("Al paracer esta url no se encuentra en nuestro sistema.");
         console.error(err);
       }
     };
@@ -51,7 +51,7 @@ export default function RedirectWithDelay() {
       <div className="flex flex-col items-center justify-center min-h-screen bg-primario text-white">
         <h1 className="text-4xl font-bold mb-12 text-center">
           {error
-            ? "Error: Unable to redirect."
+            ? "Ups... Tenemos un problema."
             : "Presiona el botón para redirigirte al sitio."}
         </h1>
         {error ? (
