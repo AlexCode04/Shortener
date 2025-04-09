@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
 class SingletonPrismaClient {
+  
   private static instance: PrismaClient | null = null;
 
   static getInstance(): PrismaClient {
